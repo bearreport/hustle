@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<style>
+
+#floater{
+z-index: 1}
+
+body {
+background-color: #0090ff;
+}
+
+.mtpo {
+z-index: -1;
+}
+
+.sky {
+    /* The image used */
+    background-color: #0090ff;
+
+    /* Set a specific height */
+    min-height: 200px;
+
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+}
+
+.water {
+	background-image: url("images/water.png");
+	height: 32px;
+	
+}
+
+.city {
+	background-image: url("images/city.png");
+	height: 71px;
+
+}
+
+		.tech-water {
+		  height: 32px;
+		  max-width: auto;
+		  margin: 0 auto;
+		  position: relative;
+		  overflow: hidden;
+		  transform: translate3d(0, 0, 0);
+		}
+
+		.tech-water > div {
+		  height: 32px;
+		  width: 191826px;
+		  background: url("images/water.png");
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  height: 100%;
+		  transform: translate3d(0, 0, 0);
+		}
+
+		.tech-water .mover-0 {
+		  animation: moveSlideshow 7800s linear infinite;
+		}
+		.tech-water .mover-1 {
+		  animation: moveSlideshow 5800s linear infinite;
+		}
+		.tech-water .mover-2 {
+		  animation: moveSlideshow 4800s linear infinite;
+		}
+		.tech-water .mover-3 {
+			animation: moveSlideshow 4400s linear infinite;
+		}
+		
+
+		@keyframes moveSlideshow {
+		  100% { 
+			transform: translateX(-66.6666%);  
+		  }
+		}
+
+		.tech-city {
+		  height: 142px;
+		  max-width: auto;
+		  margin: 0 auto;
+		  position: relative;
+		  overflow: hidden;
+		  transform: translate3d(0, 0, 0);
+		}
+
+		.tech-city > div {
+		  height: 142px;
+		  width: 191826px;
+		  background: url("images/city.png");
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  height: 100%;
+		  transform: translate3d(0, 0, 0);
+		}
+
+		.tech-city .mover-1 {
+		  animation: moveSlideshow 9000s linear infinite;
+		}
+	
+
+		@keyframes moveSlideshow {
+		  100% { 
+			transform: translateX(-66.6666%);  
+		  }
+		}
+		
+		.tech-rail {
+		  height: 48px;
+		  max-width: auto;
+		  margin: 0 auto;
+		  position: relative;
+		  overflow: hidden;
+		  transform: translate3d(0, 0, 0);
+		}
+
+		.tech-rail > div {
+		  height: 48px;
+		  width: 191826px;
+		  background: url("images/rail.png");
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  height: 100%;
+		  transform: translate3d(0, 0, 0);
+		}
+
+		.tech-rail .mover-1 {
+		  animation: moveSlideshow 2200s linear infinite;
+		}
+	
+
+		@keyframes moveSlideshow {
+		  100% { 
+			transform: translateX(-66.6666%);  
+		  }}
+		
+		
+		.tech-tile {
+		  height: 48px;
+		  max-width: auto;
+		  margin: 0 auto;
+		  position: relative;
+		  overflow: hidden;
+		  transform: translate3d(0, 0, 0);
+		}
+
+		.tech-tile > div {
+		  height: 48px;
+		  width: 191826px;
+		  background: url("images/tile.png");
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  height: 100%;
+		  transform: translate3d(0, 0, 0);
+		}
+
+		.tech-tile .mover-1 {
+		  animation: moveSlideshow 2200s linear infinite;
+		}
+	
+
+		@keyframes moveSlideshow {
+		  100% { 
+			transform: translateX(-66.6666%);  
+		  
+		  }}
+		  
+		  .tech-road {
+		  height: 90px;
+		  max-width: auto;
+		  margin: 0 auto;
+		  position: relative;
+		  overflow: hidden;
+		  transform: translate3d(0, 0, 0);
+		}
+
+		.tech-road > div {
+		  height: 90px;
+		  width: 191826px;
+		  background: url("images/road.png");
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  height: 100%;
+		  transform: translate3d(0, 0, 0);
+		}
+
+		.tech-road.mover-1 {
+		  animation: moveSlideshow 2100s linear infinite;
+		}
+	
+
+		@keyframes moveSlideshow {
+		  100% { 
+			transform: translateX(-66.6666%);  
+		  }
+		}
+</style>
+<script>
+			  $( function() {
+				$( "#floater" ).draggable();
+			  } );
+ </script>
+<script>
+		
+</script>
+
+</head>
+  
+	<body>
+    
+	<div class="mtpo">
+	
+	<div class="sky"></div>
+		
+		<div id="floater">
+		<img src="images/lightning.gif" />
+	</div>
+		<div class="tech-city">
+			<div class="mover-1"></div>
+		</div>
+		<div class="tech-water">
+			<div class="mover-1"></div>
+		</div>
+		<div class="tech-water">
+			<div class="mover-0"></div>
+		</div>
+		<div class="tech-water">
+			<div class="mover-1"></div>
+		</div>
+		<div class="tech-water">
+			<div class="mover-2"></div>
+		</div>
+		<div class="tech-water">
+			<div class="mover-2"></div>
+		</div>
+		<div class="tech-water">
+			<div class="mover-3"></div>
+		</div>
+		<div class="tech-rail">
+			<div class="mover-1"></div>
+		</div>
+		<div class="tech-tile">
+			<div class="mover-1"></div>
+		</div>
+		<div class="tech-tile">
+			<div class="mover-1"></div>
+		</div>
+		<div class="tech-road">
+			<div class="mover-1"></div>
+		</div>
+	</div>
+	
+	</body>
+</html>
